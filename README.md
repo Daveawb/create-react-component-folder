@@ -133,8 +133,11 @@ So now all you have to do is type **npx crcf componentName** and you will get al
   "proptypes",
   "stories",
   "nosemi",
-  "cssmodules"
+  "singlequote",
+  "cssmodules",
   "namedexports",
+  "graphql",
+  "stylesext",
   {
     "output": "base/directory/to/place/created/components"
   }
@@ -144,7 +147,7 @@ So now all you have to do is type **npx crcf componentName** and you will get al
 ## Creating index.js file for multiple component imports
 
 ```sh
-$ npx crcf --createindex
+$ npx crcf --createindex components/myComponent/
 ```
 
 ## Output in index.js file for multiple component imports
@@ -187,7 +190,7 @@ Templates are always passed a number of variables to help you generate templates
 ## Options
 
 ```sh
-$ npx crcf --help
+$ npx crcf create --help
 
   Usage: index [options]
 
@@ -197,9 +200,11 @@ $ npx crcf --help
     --typescript        Creates Typescript component and files
     --nocss             No css file
     --notest            No test file
-    --cssmodules        Creates css/less/scss file with .module extensions. Example 
+    --cssmodules        Creates css/less/scss file with .module extensions. Example
     --reactnative       Creates React Native components
     --createindex       Creates index.js file for multple component imports
+    --graphql           Creates a index.graphql file
+    --stylesext         Creates a Component.styles.(ts|js) file
     -f, --functional    Creates React stateless functional component
     -j, --jsx           Creates the component file with .jsx extension
     -l, --less          Adds .less file to component
@@ -209,6 +214,7 @@ $ npx crcf --help
     -h, --help          output usage information
     -sb, --stories      Add Storie file to component
     -ns, --nosemi       No semicolons
+    -sq, --singlequote  Formats output files with single quotes
     -x, --namedexports  Creates files using named exports
 ```
 
